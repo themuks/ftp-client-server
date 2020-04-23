@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="200.0" spacing="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.MainController">
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+   <children>
+      <RadioButton mnemonicParsing="false" selected="true" text="HTTP">
+         <toggleGroup>
+            <ToggleGroup fx:id="protocolGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton mnemonicParsing="false" text="POP3" toggleGroup="$protocolGroup" />
+      <RadioButton mnemonicParsing="false" text="SMTP" toggleGroup="$protocolGroup" />
+      <RadioButton mnemonicParsing="false" text="FTP" toggleGroup="$protocolGroup" />
+      <Separator />
+      <RadioButton mnemonicParsing="false" selected="true" text="Клиент">
+         <toggleGroup>
+            <ToggleGroup fx:id="typeGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton mnemonicParsing="false" text="Сервер" />
+      <HBox alignment="CENTER_RIGHT" spacing="8.0">
+         <children>
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#onClickOkButton" text="Ок" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
